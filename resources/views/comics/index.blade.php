@@ -19,7 +19,9 @@
                     @foreach ($comics as $index => $comic)
                         <div class="comic-item">
                             <div class="comic-thumb-container">
-                                <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}" class="comic-thumb">
+                                <a href="{{ url('comics/' . $index) }}">
+                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}" class="comic-thumb">
+                                </a>
                             </div>
                             <div class="comic-details">
                                 <h3 class="comic-title">
